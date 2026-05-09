@@ -54,7 +54,7 @@ export function VisitHero() {
             className="inline-flex items-center gap-2 text-caption text-cta mb-4"
           >
             <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
-            Phra Khanong, Bangkok
+            {t("location_badge")}
           </motion.span>
 
           {/* Title */}

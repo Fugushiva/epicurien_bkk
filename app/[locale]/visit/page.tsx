@@ -37,6 +37,8 @@ export async function generateMetadata({
  */
 export default async function VisitPage({ params }: VisitPageProps) {
   const { locale } = await params;
+  const tVisit = await getTranslations({ locale, namespace: "visit_page" });
+  const tNav = await getTranslations({ locale, namespace: "navigation" });
 
   return (
     <>
@@ -92,13 +94,13 @@ export default async function VisitPage({ params }: VisitPageProps) {
               {
                 "@type": "ListItem",
                 position: 1,
-                name: "Home",
+                name: tNav("home"),
                 item: "https://epicurien.bkk",
               },
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Visit",
+                name: tVisit("title"),
                 item: "https://epicurien.bkk/visit",
               },
             ],

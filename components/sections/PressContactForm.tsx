@@ -37,10 +37,10 @@ export function PressContactForm() {
   );
 
   const INQUIRY_TYPES = [
-    { value: "interview", label: "Interview" },
-    { value: "review", label: "Review / Feature" },
-    { value: "partnership", label: "Partnership" },
-    { value: "other", label: "Other" },
+    { value: "interview", label: t("inquiry_interview") },
+    { value: "review", label: t("inquiry_review") },
+    { value: "partnership", label: t("inquiry_partnership") },
+    { value: "other", label: t("inquiry_other") },
   ];
 
   return (
@@ -71,8 +71,7 @@ export function PressContactForm() {
               {t("title")}
             </h2>
             <p className="text-body text-secondary max-w-sm">
-              For media enquiries, interviews, features, and partnership
-              requests — reach out directly.
+              {t("description")}
             </p>
           </motion.div>
 
@@ -137,7 +136,7 @@ export function PressContactForm() {
                     required
                     autoComplete="name"
                     className={inputClass}
-                    placeholder="Your full name"
+                    placeholder={t("name_placeholder")}
                     disabled={isPending}
                     aria-required="true"
                   />
@@ -173,7 +172,7 @@ export function PressContactForm() {
                     htmlFor="press-org"
                     className="block text-caption text-primary mb-2"
                   >
-                    Organization
+                    {t("organization_label")}
                   </label>
                   <input
                     id="press-org"
@@ -181,7 +180,7 @@ export function PressContactForm() {
                     type="text"
                     autoComplete="organization"
                     className={inputClass}
-                    placeholder="Publication or company (optional)"
+                    placeholder={t("organization_placeholder")}
                     disabled={isPending}
                   />
                 </div>
@@ -207,7 +206,7 @@ export function PressContactForm() {
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      Select inquiry type
+                      {t("inquiry_placeholder")}
                     </option>
                     {INQUIRY_TYPES.map(({ value, label }) => (
                       <option key={value} value={value}>
@@ -234,7 +233,7 @@ export function PressContactForm() {
                     required
                     rows={5}
                     className={cn(inputClass, "resize-y min-h-[120px]")}
-                    placeholder="Tell us about your project or inquiry…"
+                    placeholder={t("message_placeholder")}
                     disabled={isPending}
                     aria-required="true"
                   />
@@ -258,7 +257,7 @@ export function PressContactForm() {
                     className={cn("w-4 h-4", isPending && "animate-pulse")}
                     aria-hidden="true"
                   />
-                  {isPending ? "Sending…" : t("submit")}
+                  {isPending ? t("sending") : t("submit")}
                 </button>
               </form>
             )}

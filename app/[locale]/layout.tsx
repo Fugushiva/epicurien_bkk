@@ -7,7 +7,7 @@ import {
   JetBrains_Mono,
 } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
@@ -120,6 +120,7 @@ export default async function LocaleLayout({
 
   // Providing all messages to the client side is the easiest way to get started
   const messages = await getMessages();
+  const tCommon = await getTranslations({ locale, namespace: "common" });
 
   const fontVariables = [
     fraunces.variable,
@@ -139,7 +140,7 @@ export default async function LocaleLayout({
               href="#main-content"
               className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-cta focus:text-primary focus:rounded-md focus:font-body focus:text-sm"
             >
-              Skip to main content
+              {tCommon("skip_to_content")}
             </a>
             <Navbar />
             <main id="main-content" className="flex flex-1 flex-col">

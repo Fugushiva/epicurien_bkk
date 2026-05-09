@@ -18,10 +18,10 @@ export function PressMediaKit() {
   const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
 
   const contents = [
-    "Logo SVG & PNG (horizontal + square)",
-    "High-resolution photography",
-    "Chef biography (EN / FR / TH)",
-    "Brand fact sheet",
+    t("contents_logo"),
+    t("contents_photos"),
+    t("contents_bio"),
+    t("contents_factsheet"),
   ];
 
   return (

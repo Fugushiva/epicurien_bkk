@@ -27,7 +27,11 @@
   "story_geste": {
     "chapter": "Chapter 2",
     "title": "The Craft",
-    "body": "27 layers of pure butter dough, folded by hand. Vanilla sourced from Madagascar. A crust that shatters on touch and melts in memory. Every croissant is a meditation on technique — baked fresh each morning before dawn."
+    "body": "27 layers of pure butter dough, folded by hand. Vanilla sourced from Madagascar. A crust that shatters on touch and melts in memory. Every croissant is a meditation on technique — baked fresh each morning before dawn.",
+    "ingredients_label": "Key Ingredients",
+    "ingredient_butter": "Organic French butter",
+    "ingredient_vanilla": "Madagascar vanilla",
+    "ingredient_flour": "Artisan flour — T45"
   },
   "croissant_bar": {
     "title": "Our Selection",
@@ -37,7 +41,8 @@
     "title": "As Seen In"
   },
   "visit_teaser": {
-    "cta": "Find Us"
+    "cta": "Find Us",
+    "open_daily": "Open daily"
   },
   "menu_page": {
     "title": "Menu",
@@ -84,7 +89,10 @@
     },
     "press_mentions": {
       "title": "In the Press"
-    }
+    },
+    "location_badge": "Phra Khanong, Bangkok",
+    "hours_open_every_day": "Open Every Day",
+    "parking_note": "Parking available at W District complex."
   },
   "press_page": {
     "title": "Media Kit & Press Room",
@@ -92,28 +100,47 @@
     "media_kit": {
       "title": "Download Media Kit",
       "body": "Logos, high-resolution photos, chef biography, and fact sheet.",
-      "cta": "Download ZIP"
+      "cta": "Download ZIP",
+      "contents_logo": "Logo SVG & PNG (horizontal + square)",
+      "contents_photos": "High-resolution photography",
+      "contents_bio": "Chef biography (EN / FR / TH)",
+      "contents_factsheet": "Brand fact sheet"
     },
     "mentions": {
       "title": "Press Mentions"
     },
     "contact": {
       "title": "Press Contact",
+      "description": "For media enquiries, interviews, features, and partnership requests — reach out directly.",
       "name_label": "Your Name",
+      "name_placeholder": "Your full name",
       "email_label": "Email Address",
+      "organization_label": "Organization",
+      "organization_placeholder": "Publication or company (optional)",
       "inquiry_label": "Inquiry Type",
+      "inquiry_placeholder": "Select inquiry type",
+      "inquiry_interview": "Interview",
+      "inquiry_review": "Review / Feature",
+      "inquiry_partnership": "Partnership",
+      "inquiry_other": "Other",
       "message_label": "Message",
+      "message_placeholder": "Tell us about your project or inquiry…",
       "submit": "Send Inquiry",
+      "sending": "Sending…",
       "success": "Your message has been sent. We'll be in touch shortly.",
       "error": "Something went wrong. Please try again."
     },
     "awards": {
-      "title": "Awards & Distinctions"
+      "title": "Awards & Distinctions",
+      "eyebrow": "Official Recognition · March 2021",
+      "award_name": "Best Croissant Île-de-France 2021",
+      "award_description": "Organised at Lycée d'Étiolles, Essonne. Chef Enzo Le Bohec — then 17 years old and training at École Ferrandi Paris — won among 9 candidates from Paris, Essonne, and Yvelines. Judged on form, colour, texture, and flavour by 5 professional jurors."
     }
   },
   "footer": {
     "tagline": "Award-winning French pastry in the heart of Bangkok.",
     "contact": "Contact",
+    "resources": "Resources",
     "social": "Follow Us",
     "legal": "© 2026 Épicurien French Bakery. All rights reserved.",
     "privacy": "Privacy Policy",
@@ -129,5 +156,8 @@
     "close_menu": "Close menu",
     "language": "Language",
     "skip_to_content": "Skip to main content"
+  },
+  "press_page_hero": {
+    "eyebrow": "Media & Press"
   }
 }

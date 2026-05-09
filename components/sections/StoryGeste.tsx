@@ -141,13 +141,13 @@ export function StoryGeste({ className }: StoryGesteProps) {
             >
               <div className="flex flex-col gap-1">
                 <span className="text-caption text-cta tracking-widest">
-                  Key Ingredients
+                  {t("ingredients_label")}
                 </span>
                 <ul className="mt-2 flex flex-col gap-1">
                   {[
-                    "Organic French butter",
-                    "Madagascar vanilla",
-                    "Artisan flour — T45",
+                    t("ingredient_butter"),
+                    t("ingredient_vanilla"),
+                    t("ingredient_flour"),
                   ].map((item) => (
                     <li
                       key={item}

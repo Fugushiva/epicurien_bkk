@@ -61,7 +61,9 @@ export function VisitHours() {
                   className="w-4 h-4 text-cta shrink-0"
                   aria-hidden="true"
                 />
-                <span className="text-caption text-cta">Open Every Day</span>
+                <span className="text-caption text-cta">
+                  {t("hours_open_every_day")}
+                </span>
               </div>
               {rows.map((row) => (
                 <div
@@ -123,9 +125,7 @@ export function VisitHours() {
               </span>
             </a>
 
-            <p className="text-body text-bg/60 pt-2">
-              Parking available at W District complex.
-            </p>
+            <p className="text-body text-bg/60 pt-2">{t("parking_note")}</p>
           </motion.div>
         </div>
       </div>

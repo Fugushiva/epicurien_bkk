@@ -10,6 +10,7 @@ import { Newspaper } from "lucide-react";
  */
 export function PressHero() {
   const t = useTranslations("press_page");
+  const tHero = useTranslations("press_page_hero");
   const prefersReducedMotion = usePreferReducedMotion();
 
   const containerVariants = {
@@ -53,7 +54,7 @@ export function PressHero() {
             className="inline-flex items-center gap-2 text-caption text-cta mb-4"
           >
             <Newspaper className="w-3.5 h-3.5" aria-hidden="true" />
-            Media & Press
+            {tHero("eyebrow")}
           </motion.span>
 
           {/* Title */}

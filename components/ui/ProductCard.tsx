@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
 import { usePreferReducedMotion } from "@/hooks/usePreferReducedMotion";
 
@@ -35,13 +36,6 @@ export interface ProductCardProps {
   className?: string;
 }
 
-const categoryLabels: Record<ProductCategory, string> = {
-  croissant: "Croissant",
-  viennoiserie: "Viennoiserie",
-  bread: "Bread",
-  seasonal: "Seasonal",
-};
-
 /**
  * ProductCard — Reusable card for menu items and section grids.
  * Hover: image scales to 1.05 (desktop). Reduced-motion: no scale.
@@ -59,7 +53,15 @@ export function ProductCard({
   className,
 }: ProductCardProps) {
   const prefersReducedMotion = usePreferReducedMotion();
+  const tMenu = useTranslations("menu_page.categories");
   const linkHref = href ?? `#${id}`;
+
+  const categoryLabels: Record<ProductCategory, string> = {
+    croissant: tMenu("croissant"),
+    viennoiserie: tMenu("viennoiserie"),
+    bread: tMenu("bread"),
+    seasonal: tMenu("seasonal"),
+  };
 
   return (
     <motion.article
