@@ -12,6 +12,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import "@/app/globals.css";
 
 // ── Critical fonts (preloaded) ─────────────────────────────────────────────
@@ -144,6 +145,7 @@ export default async function LocaleLayout({
             <main id="main-content" className="flex flex-1 flex-col">
               {children}
             </main>
+            <Footer />
           </SmoothScroll>
         </NextIntlClientProvider>
       </body>
