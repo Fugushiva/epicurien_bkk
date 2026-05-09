@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { buildAlternates, ogLocale, absoluteUrl } from "@/lib/seo";
 import { Hero } from "@/components/sections/Hero";
 import { AwardBand } from "@/components/sections/AwardBand";
 import { StoryChef } from "@/components/sections/StoryChef";
@@ -22,17 +23,10 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("subtitle"),
-    alternates: {
-      canonical: `https://epicurien.bkk/${locale}`,
-      languages: {
-        en: "https://epicurien.bkk/en",
-        fr: "https://epicurien.bkk/fr",
-        th: "https://epicurien.bkk/th",
-      },
-    },
+    alternates: buildAlternates(locale),
     openGraph: {
-      url: `https://epicurien.bkk/${locale}`,
-      locale: locale === "fr" ? "fr_FR" : locale === "th" ? "th_TH" : "en_US",
+      url: absoluteUrl(locale),
+      locale: ogLocale(locale),
     },
   };
 }
