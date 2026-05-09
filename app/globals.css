@@ -1,26 +1,209 @@
 @import "tailwindcss";
 
+/* ============================================================
+   ÉPICURIEN FRENCH BAKERY — Design System
+   Tailwind v4 CSS-first configuration
+   ============================================================ */
+
+@theme {
+  /* ---- Colors ---- */
+  --color-primary: #1c1917; /* stone-900 — ink black */
+  --color-secondary: #44403c; /* stone-700 — muted text */
+  --color-cta: #ca8a04; /* yellow-600 — gold buttons */
+  --color-bg: #fafaf9; /* stone-50 — cream background */
+  --color-accent-butter: #fef3c7; /* amber-100 — food accent */
+  --color-accent-caramel: #92400e; /* amber-700 — crust accent */
+  --color-text: #0c0a09; /* stone-950 — text body */
+
+  /* ---- Font Families ---- */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-heading: "Playfair Display", "Bookman Old Style", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-thai: "IBM Plex Sans Thai", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  /* ---- Font Sizes (fluid clamp) ---- */
+  --font-size-display-1: clamp(4rem, 10vw, 12rem);
+  --font-size-display-2: clamp(2.5rem, 8vw, 4rem);
+  --font-size-heading-1: clamp(1.5rem, 5vw, 2.5rem);
+  --font-size-heading-2: clamp(1.25rem, 4vw, 2rem);
+  --font-size-body: clamp(1rem, 2vw, 1.125rem);
+  --font-size-caption: clamp(0.875rem, 1.5vw, 1rem);
+
+  /* ---- Line heights ---- */
+  --line-height-display: 1.05;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.65;
+
+  /* ---- Spacing ---- */
+  --spacing-section: clamp(4rem, 8vw, 8rem);
+
+  /* ---- Animation durations ---- */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 400ms;
+
+  /* ---- Animation easings ---- */
+  --easing-in: cubic-bezier(0.42, 0, 1, 1);
+  --easing-out: cubic-bezier(0, 0, 0.58, 1);
+  --easing-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+
+  /* ---- Custom animations ---- */
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-text-reveal: text-reveal 0.5s ease-out forwards;
+  --animate-fade-in: fade-in 0.4s ease-out forwards;
+  --animate-slide-up: slide-up 0.4s ease-out forwards;
+}
+
+/* ============================================================
+   CSS Custom Properties (runtime tokens)
+   ============================================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Color tokens (duplicated for non-Tailwind usage) */
+  --color-primary: #1c1917;
+  --color-secondary: #44403c;
+  --color-cta: #ca8a04;
+  --color-bg: #fafaf9;
+  --color-accent-butter: #fef3c7;
+  --color-accent-caramel: #92400e;
+  --color-text: #0c0a09;
+
+  /* Animation timing */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 400ms;
+  --easing-in: cubic-bezier(0.42, 0, 1, 1);
+  --easing-out: cubic-bezier(0, 0, 0.58, 1);
+
+  /* Spacing */
+  --spacing-unit: 1rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   Keyframe Animations
+   ============================================================ */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes text-reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   Base Styles
+   ============================================================ */
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+}
+
+/* Disable smooth scroll when reduced-motion is preferred */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100dvh;
+}
+
+/* ============================================================
+   Typography Utility Classes
+   ============================================================ */
+
+.text-display-1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-display-1);
+  line-height: var(--line-height-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.text-display-2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display-2);
+  line-height: var(--line-height-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.text-heading-1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading-1);
+  line-height: var(--line-height-heading);
+  font-weight: 600;
+}
+
+.text-heading-2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading-2);
+  line-height: var(--line-height-heading);
+  font-weight: 600;
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-weight: 400;
+}
+
+.text-caption {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-caption);
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
