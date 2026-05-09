@@ -11,6 +11,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { Navbar } from "@/components/layout/Navbar";
 import "@/app/globals.css";
 
 // ── Critical fonts (preloaded) ─────────────────────────────────────────────
@@ -139,7 +140,10 @@ export default async function LocaleLayout({
             >
               Skip to main content
             </a>
-            {children}
+            <Navbar />
+            <main id="main-content" className="flex flex-1 flex-col">
+              {children}
+            </main>
           </SmoothScroll>
         </NextIntlClientProvider>
       </body>
