@@ -1,0 +1,133 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "visit": "Visiter",
+    "press": "Presse"
+  },
+  "hero": {
+    "title": "Épicurien French Bakery",
+    "subtitle": "Le meilleur croissant de Paris. Maintenant à Bangkok.",
+    "scroll_label": "Défiler pour explorer"
+  },
+  "award_band": {
+    "text": "★ Meilleur Croissant d'Île-de-France 2021 ★"
+  },
+  "story_chef": {
+    "chapter": "Chapitre 1",
+    "title": "Le Chef",
+    "body": "Formé à l'École Ferrandi Paris, le Chef Enzo Le Bohec a remporté le titre de Meilleur Croissant d'Île-de-France en 2021. Il a apporté son savoir-faire — et son levain — à Bangkok, où il a fondé Épicurien French Bakery.",
+    "quote": "J'ai gagné. Cela a demandé du courage, de la précision, et un amour du métier qui frôle l'obsession."
+  },
+  "pull_quote": {
+    "text": "Je souhaite plus tard ouvrir une boulangerie en Thaïlande.",
+    "attribution": "— Enzo Le Bohec, Chef & Fondateur",
+    "cta": "Nous Visiter"
+  },
+  "story_geste": {
+    "chapter": "Chapitre 2",
+    "title": "Le Geste",
+    "body": "27 couches de pâte au pur beurre, feuilletée à la main. Vanille originaire de Madagascar. Une croûte qui craque au toucher et fond dans la mémoire. Chaque croissant est une méditation sur la technique — cuit frais chaque matin avant l'aube."
+  },
+  "croissant_bar": {
+    "title": "Notre Sélection",
+    "cta": "Menu Complet"
+  },
+  "press_band": {
+    "title": "Ils Parlent de Nous"
+  },
+  "visit_teaser": {
+    "cta": "Nous Trouver"
+  },
+  "menu_page": {
+    "title": "Menu",
+    "subtitle": "Pâtisseries et pains frais, cuits quotidiennement avec des ingrédients premium.",
+    "categories": {
+      "all": "Tout",
+      "croissant": "Croissants",
+      "viennoiserie": "Viennoiseries",
+      "bread": "Pains",
+      "seasonal": "Saisonniers"
+    }
+  },
+  "visit_page": {
+    "title": "Nous Trouver",
+    "subtitle": "Venez pour le croissant. Restez pour l'ambiance.",
+    "location": {
+      "title": "Localisation",
+      "address": "W District, Sukhumvit 71, Phra Khanong, Watthana, Bangkok 10110",
+      "bts": "BTS Phra Khanong (5 min à pied)"
+    },
+    "hours": {
+      "title": "Horaires & Contact",
+      "weekdays": "Lundi – Vendredi",
+      "weekends": "Samedi – Dimanche",
+      "phone": "+66 80 791 2902",
+      "email": "hello@epicurien.bkk"
+    },
+    "why_visit": {
+      "title": "Pourquoi Nous Visiter",
+      "reasons": {
+        "ambiance": {
+          "title": "Ambiance Chaleureuse",
+          "body": "Un espace chaleureux et lumineux inspiré des boulangeries parisiennes."
+        },
+        "quality": {
+          "title": "Qualité Exceptionnelle",
+          "body": "Recettes primées, ingrédients sourcés localement, préparés frais chaque jour."
+        },
+        "location": {
+          "title": "Emplacement Idéal",
+          "body": "Au cœur de Phra Khanong au W District, facilement accessible en BTS."
+        }
+      }
+    },
+    "press_mentions": {
+      "title": "Dans la Presse"
+    }
+  },
+  "press_page": {
+    "title": "Kit Média & Salle de Presse",
+    "subtitle": "Ressources presse, mentions et contact pour les demandes médias.",
+    "media_kit": {
+      "title": "Télécharger le Kit Média",
+      "body": "Logos, photos haute résolution, biographie du chef et fiche technique.",
+      "cta": "Télécharger ZIP"
+    },
+    "mentions": {
+      "title": "Mentions Presse"
+    },
+    "contact": {
+      "title": "Contact Presse",
+      "name_label": "Votre Nom",
+      "email_label": "Adresse Email",
+      "inquiry_label": "Type de Demande",
+      "message_label": "Message",
+      "submit": "Envoyer la Demande",
+      "success": "Votre message a été envoyé. Nous vous répondrons prochainement.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "awards": {
+      "title": "Prix & Distinctions"
+    }
+  },
+  "footer": {
+    "tagline": "Pâtisserie française primée au cœur de Bangkok.",
+    "contact": "Contact",
+    "social": "Suivez-Nous",
+    "legal": "© 2026 Épicurien French Bakery. Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "address": "W District, Sukhumvit 71, Bangkok"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "error": "Une erreur s'est produite.",
+    "back": "Retour",
+    "see_more": "Voir Plus",
+    "close": "Fermer",
+    "open_menu": "Ouvrir le menu",
+    "close_menu": "Fermer le menu",
+    "language": "Langue",
+    "skip_to_content": "Aller au contenu principal"
+  }
+}
