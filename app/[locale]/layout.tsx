@@ -13,6 +13,7 @@ import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { LoadingCurtain } from "@/components/ui/LoadingCurtain";
 import "@/app/globals.css";
 
 // ── Critical fonts (preloaded) ─────────────────────────────────────────────
@@ -134,6 +135,8 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${fontVariables} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-text font-body">
         <NextIntlClientProvider messages={messages}>
+          {/* Page entrance animation — only on first session load */}
+          <LoadingCurtain />
           <SmoothScroll>
             {/* Skip to main content — a11y */}
             <a

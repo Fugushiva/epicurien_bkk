@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -26,9 +26,36 @@ export function Navbar({ className }: NavbarProps) {
   const prefersReducedMotion = usePreferReducedMotion();
   const { direction, isPastThreshold } = useScrollTrigger(80);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [easterEggActive, setEasterEggActive] = useState(false);
+  const clickCountRef = useRef(0);
+  const clickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Hide on scroll down past threshold, show on scroll up or at top
   const isHidden = direction === "down" && isPastThreshold;
+
+  // Easter egg: triple-click on logo
+  const handleLogoClick = useCallback(() => {
+    clickCountRef.current += 1;
+
+    if (clickTimerRef.current) clearTimeout(clickTimerRef.current);
+
+    clickTimerRef.current = setTimeout(() => {
+      clickCountRef.current = 0;
+    }, 600);
+
+    if (clickCountRef.current >= 3) {
+      clickCountRef.current = 0;
+      if (clickTimerRef.current) clearTimeout(clickTimerRef.current);
+      setEasterEggActive(true);
+      setTimeout(() => setEasterEggActive(false), 3000);
+    }
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (clickTimerRef.current) clearTimeout(clickTimerRef.current);
+    };
+  }, []);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
@@ -78,15 +105,26 @@ export function Navbar({ className }: NavbarProps) {
           className,
         )}
       >
-        {/* Logo */}
+        {/* Logo — triple-click triggers easter egg */}
         <Link
           href={`/${locale}`}
+          onClick={handleLogoClick}
           className="flex items-center gap-2 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded-full"
           aria-label="Épicurien French Bakery — Home"
         >
-          <span className="font-display text-bg text-lg tracking-tight leading-none">
+          <motion.span
+            animate={
+              prefersReducedMotion
+                ? {}
+                : easterEggActive
+                  ? { color: "#CA8A04", scale: 1.1 }
+                  : { color: "#FAFAF9", scale: 1 }
+            }
+            transition={{ duration: 0.3 }}
+            className="font-display text-lg tracking-tight leading-none"
+          >
             Épicurien
-          </span>
+          </motion.span>
         </Link>
 
         {/* Desktop nav links */}
@@ -126,6 +164,33 @@ export function Navbar({ className }: NavbarProps) {
           </button>
         </div>
       </motion.header>
+
+      {/* ── Easter egg overlay ──────────────────────────────────────── */}
+      <AnimatePresence>
+        {easterEggActive && (
+          <motion.div
+            key="easter-egg"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[9998] flex items-center justify-center pointer-events-none"
+            aria-hidden="true"
+          >
+            <div className="bg-primary/95 backdrop-blur-lg rounded-2xl px-12 py-10 text-center border border-cta/20 shadow-2xl">
+              <p className="font-display text-cta text-4xl mb-3 tracking-tight">
+                ★ Meilleur Croissant ★
+              </p>
+              <p className="font-body text-bg/70 text-sm tracking-widest uppercase">
+                Île-de-France 2021
+              </p>
+              <p className="font-mono text-bg/40 text-xs mt-4 tracking-widest">
+                — Enzo Le Bohec
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ── Mobile menu ──────────────────────────────────────────────── */}
       <AnimatePresence>
