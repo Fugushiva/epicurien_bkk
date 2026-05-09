@@ -78,7 +78,7 @@ export function Footer({ className }: FooterProps) {
           {/* Column 3 — Resources */}
           <div>
             <h3 className="font-heading text-sm font-semibold text-bg/40 uppercase tracking-widest mb-4">
-              Resources
+              {t("resources")}
             </h3>
             <nav aria-label="Footer resources navigation">
               <ul className="space-y-2.5">

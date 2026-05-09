@@ -27,7 +27,11 @@
   "story_geste": {
     "chapter": "Chapitre 2",
     "title": "Le Geste",
-    "body": "27 couches de pâte au pur beurre, feuilletée à la main. Vanille originaire de Madagascar. Une croûte qui craque au toucher et fond dans la mémoire. Chaque croissant est une méditation sur la technique — cuit frais chaque matin avant l'aube."
+    "body": "27 couches de pâte au pur beurre, feuilletée à la main. Vanille originaire de Madagascar. Une croûte qui craque au toucher et fond dans la mémoire. Chaque croissant est une méditation sur la technique — cuit frais chaque matin avant l'aube.",
+    "ingredients_label": "Ingrédients Clés",
+    "ingredient_butter": "Beurre français biologique",
+    "ingredient_vanilla": "Vanille de Madagascar",
+    "ingredient_flour": "Farine artisanale — T45"
   },
   "croissant_bar": {
     "title": "Notre Sélection",
@@ -37,7 +41,8 @@
     "title": "Ils Parlent de Nous"
   },
   "visit_teaser": {
-    "cta": "Nous Trouver"
+    "cta": "Nous Trouver",
+    "open_daily": "Ouvert tous les jours"
   },
   "menu_page": {
     "title": "Menu",
@@ -84,7 +89,10 @@
     },
     "press_mentions": {
       "title": "Dans la Presse"
-    }
+    },
+    "location_badge": "Phra Khanong, Bangkok",
+    "hours_open_every_day": "Ouvert Tous les Jours",
+    "parking_note": "Parking disponible au complexe W District."
   },
   "press_page": {
     "title": "Kit Média & Salle de Presse",
@@ -92,28 +100,47 @@
     "media_kit": {
       "title": "Télécharger le Kit Média",
       "body": "Logos, photos haute résolution, biographie du chef et fiche technique.",
-      "cta": "Télécharger ZIP"
+      "cta": "Télécharger ZIP",
+      "contents_logo": "Logo SVG & PNG (horizontal + carré)",
+      "contents_photos": "Photographies haute résolution",
+      "contents_bio": "Biographie du chef (EN / FR / TH)",
+      "contents_factsheet": "Fiche technique de la marque"
     },
     "mentions": {
       "title": "Mentions Presse"
     },
     "contact": {
       "title": "Contact Presse",
+      "description": "Pour toute demande média, interview, article ou partenariat — contactez-nous directement.",
       "name_label": "Votre Nom",
+      "name_placeholder": "Votre nom complet",
       "email_label": "Adresse Email",
+      "organization_label": "Organisation",
+      "organization_placeholder": "Publication ou entreprise (facultatif)",
       "inquiry_label": "Type de Demande",
+      "inquiry_placeholder": "Sélectionnez le type de demande",
+      "inquiry_interview": "Interview",
+      "inquiry_review": "Critique / Article",
+      "inquiry_partnership": "Partenariat",
+      "inquiry_other": "Autre",
       "message_label": "Message",
+      "message_placeholder": "Décrivez votre projet ou votre demande…",
       "submit": "Envoyer la Demande",
+      "sending": "Envoi en cours…",
       "success": "Votre message a été envoyé. Nous vous répondrons prochainement.",
       "error": "Une erreur s'est produite. Veuillez réessayer."
     },
     "awards": {
-      "title": "Prix & Distinctions"
+      "title": "Prix & Distinctions",
+      "eyebrow": "Reconnaissance Officielle · Mars 2021",
+      "award_name": "Meilleur Croissant Île-de-France 2021",
+      "award_description": "Organisé au Lycée d'Étiolles, Essonne. Le Chef Enzo Le Bohec — alors âgé de 17 ans et en formation à l'École Ferrandi Paris — a remporté le concours parmi 9 candidats de Paris, de l'Essonne et des Yvelines. Jugé sur la forme, la couleur, la texture et la saveur par 5 jurés professionnels."
     }
   },
   "footer": {
     "tagline": "Pâtisserie française primée au cœur de Bangkok.",
     "contact": "Contact",
+    "resources": "Ressources",
     "social": "Suivez-Nous",
     "legal": "© 2026 Épicurien French Bakery. Tous droits réservés.",
     "privacy": "Politique de Confidentialité",
@@ -129,5 +156,8 @@
     "close_menu": "Fermer le menu",
     "language": "Langue",
     "skip_to_content": "Aller au contenu principal"
+  },
+  "press_page_hero": {
+    "eyebrow": "Médias & Presse"
   }
 }

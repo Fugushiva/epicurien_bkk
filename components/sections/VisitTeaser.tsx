@@ -110,7 +110,7 @@ export function VisitTeaser({ className }: VisitTeaserProps) {
           variants={itemVariants}
           className="mt-2 text-caption text-bg/50 tracking-widest"
         >
-          Open daily · {BAKERY_INFO.hours.weekdays}
+          {t("open_daily")} · {BAKERY_INFO.hours.weekdays}
         </motion.p>
 
         {/* CTA */}

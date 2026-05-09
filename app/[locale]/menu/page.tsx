@@ -32,7 +32,9 @@ export async function generateMetadata({
  * SSG (build-time rendered).
  */
 export default async function MenuPage({ params }: MenuPageProps) {
-  await params;
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "menu_page" });
+  const tNav = await getTranslations({ locale, namespace: "navigation" });
 
   return (
     <>
@@ -47,13 +49,13 @@ export default async function MenuPage({ params }: MenuPageProps) {
               {
                 "@type": "ListItem",
                 position: 1,
-                name: "Home",
+                name: tNav("home"),
                 item: "https://epicurien.bkk",
               },
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Menu",
+                name: t("title"),
                 item: "https://epicurien.bkk/menu",
               },
             ],

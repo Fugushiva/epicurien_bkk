@@ -35,7 +35,9 @@ export async function generateMetadata({
  * SSG (build-time rendered).
  */
 export default async function PressPage({ params }: PressPageProps) {
-  await params;
+  const { locale } = await params;
+  const tPress = await getTranslations({ locale, namespace: "press_page" });
+  const tNav = await getTranslations({ locale, namespace: "navigation" });
 
   return (
     <>
@@ -50,13 +52,13 @@ export default async function PressPage({ params }: PressPageProps) {
               {
                 "@type": "ListItem",
                 position: 1,
-                name: "Home",
+                name: tNav("home"),
                 item: "https://epicurien.bkk",
               },
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Press",
+                name: tPress("title"),
                 item: "https://epicurien.bkk/press",
               },
             ],

@@ -68,19 +68,10 @@ export function PressAwards() {
 
           {/* Award details */}
           <div>
-            <p className="text-caption text-cta mb-3">
-              Official Recognition · March 2021
-            </p>
-            <h3 className="text-display-2 text-bg mb-4">
-              Best Croissant
-              <br />
-              Île-de-France 2021
-            </h3>
+            <p className="text-caption text-cta mb-3">{t("eyebrow")}</p>
+            <h3 className="text-display-2 text-bg mb-4">{t("award_name")}</h3>
             <p className="text-body text-bg/70 max-w-2xl">
-              Organised at Lycée d&apos;Étiolles, Essonne. Chef Enzo Le Bohec —
-              then 17 years old and training at École Ferrandi Paris — won among
-              9 candidates from Paris, Essonne, and Yvelines. Judged on form,
-              colour, texture, and flavour by 5 professional jurors.
+              {t("award_description")}
             </p>
           </div>
         </motion.div>
