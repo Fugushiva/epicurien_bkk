@@ -32,6 +32,7 @@ export function AwardBand({ className }: AwardBandProps) {
         copies={8}
         duration={28}
         separator="·"
+        scrollVelocity
         className="text-primary font-mono text-caption tracking-widest font-medium"
       />
     </section>
