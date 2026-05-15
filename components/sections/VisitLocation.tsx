@@ -111,7 +111,7 @@ export function VisitLocation() {
           >
             <iframe
               title="Épicurien French Bakery location on Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.7!2d100.6!3d13.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zEpicurien+French+Bakery!5e0!3m2!1sen!2sth!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.5213!2d100.5921431!3d13.7181244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29d0036bd0e7b%3A0xd098b067113fa3f7!2sEpicurien!5e0!3m2!1sen!2sth!4v1683000000000!5m2!1sen!2sth"
               width="100%"
               height="100%"
               style={{ border: 0 }}
