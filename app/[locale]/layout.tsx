@@ -100,6 +100,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   manifest: "/manifest.json",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 };
 
 export const viewport: Viewport = {

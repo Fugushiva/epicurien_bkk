@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git add components/sections/VisitLocation.tsx)",
+      "mcp__b8521b2a-9393-4fcc-8f63-139bf337d333__balance",
+      "mcp__b8521b2a-9393-4fcc-8f63-139bf337d333__models_explore"
+    ]
+  }
+}
